@@ -45,7 +45,7 @@ nano ttf-dejavu ttf-liberation steam mpv pcmanfm strace nnn bat \
 htop aria2 fastfetch xorg-xwayland kdenlive gedit btop ranger python-pyqt6-webengine\
 steam-native-runtime gamemode pax-utils lib32-gamemode jre-openjdk lxterminal \
 mangohud thunderbird gimp audacity lib32-mangohud kodi ksysguard ark kate okular breeze breeze-gtk  \
-qt5-wayland xorg-server-xephyr openbox binutils emby-theater \
+qt5-wayland xorg-server-xephyr openbox binutils emby-theater yt-dlp \
 xdotool xbindkeys gparted vlc smplayer mpv fish zsh xmlstarlet nvtop duf exa systemsettings dolphin  \
 legendary gamescope  minizip flatpak libreoffice rsync sdl_mixer sdl_image sdl_ttf sdl_gfx \
 xorg-server xorg-xinit xorg-xrandr xorg-xhost xorg-xdpyinfo github-cli libwebp \
@@ -60,9 +60,12 @@ btrfs-heatmap meld lynx yq xorg xorg-server-xvfb nodejs npm cairo-dock imagemagi
 tint2 plank lxde mate mate-extra dialog xterm compsize antimicrox lutris-git chiaki procs sdl2_ttf \
 protontricks-git sublime-text-4 fuse2 heroic-games-launcher-bin moonlight-qt ventoy-bin 7-zip crun runc \
 microsoft-edge-stable-bin qdirstat peazip jq steam-rom-manager-git google-chrome steamtinkerlaunch xfwm4 xfwm4-themes \
-screenfetch glances discord jre8-openjdk gcc13 python-pip xfce4 xfce4-goodies obs-studio-git lua53"
+prismlauncher retroarch-assets-ozone libretro-beetle-psx-hw bretro-blastem libretro-bsnes libretro-dolphin duckstation  \
+libretro-gambatte libretro-melonds libretro-mgba libretro-nestopia libretro-parallel-n64 libretro-picodrive libretro-ppsspp \
+libretro-retrodream libretro-yabause pcsx2-git cemu-git citron-git ryujinx shadps4-git greenlight-bin
+screenfetch glances discord jre8-openjdk gcc13 python-pip xfce4 xfce4-goodies obs-studio-git lua53 youtube-music-bin"
 # If you want to install AUR packages, specify them in this variable
-export aur_packagelist="geforcenow-electron shadps4-bin mcpelauncher-appimage parsec-bin protonup-qt  sgdboop-bin winegui-bin icu66-bin libffi7"
+export aur_packagelist="geforcenow-electron mcpelauncher-appimage parsec-bin protonup-qt  sgdboop-bin winegui-bin icu66-bin libffi7"
 
 # ALHP is a repository containing packages from the official Arch Linux
 # repos recompiled with -O3, LTO and optimizations for modern CPUs for
