@@ -167,6 +167,27 @@ fix for nvidia lutris
 				chmod 777 /usr/bin/greenlight-beta 2>/dev/null
 					ln -sf /usr/bin/greenlight-beta /usr/bin/greenlight 2>/dev/null
 #--------------------------------------------------------------------------------------------
+# Add VacuumTube AppImage (latest release)
+echo -e "\n\n\nInstalling latest VacuumTube AppImage..."
+
+# Get latest AppImage URL from GitHub
+link=$(curl -s https://api.github.com/repos/shy1132/VacuumTube/releases/latest | \
+  jq -r '.assets[] | select(.name | endswith(".AppImage")) | .browser_download_url' | \
+  grep AppImage)
+
+if [[ -z "$link" ]]; then
+  echo "❌ Failed to fetch VacuumTube AppImage URL."
+  exit 1
+fi
+
+# Download and install to /usr/bin
+echo "Downloading from: $link"
+wget --tries=50 --no-check-certificate --no-cache --no-cookies -O "/usr/bin/vacuumtube" "$link"
+
+# Make it executable
+chmod +x /usr/bin/vacuumtube
+
+echo "✅ VacuumTube installed to /usr/bin/vacuumtube"
 
 
 #--------------------------------------------------------------------------------------------
