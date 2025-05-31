@@ -191,34 +191,42 @@ echo "✅ VacuumTube installed to /usr/bin/vacuumtube"
 
 
 #--------------------------------------------------------------------------------------------
-# Add basic Pacman support in Conty Autobuild
 echo -e "\n\n\nAdding basic Pacman support"
 
-# Ensure directories exist
-mkdir -p /opt/pacman/lib /opt/pacman/cache 2>/dev/null
+# layout
+install -d -m 755 /opt/pacman/lib/{local,sync}
+install -d -m 755 /opt/pacman/cache
+install -d -m 700 /opt/pacman/gnupg
 
-# Copy necessary Pacman configuration and data
-cp -r /etc/pacman* /opt/pacman/ 2>/dev/null
-cp -r /var/lib/pacman/* /opt/pacman/lib/ 2>/dev/null
-cp -r /var/cache/pacman/* /opt/pacman/cache/ 2>/dev/null  
+# config + key-rings
+cp -a /etc/pacman.conf  /opt/pacman/
+cp -a /etc/pacman.d     /opt/pacman/
+sed -i \
+  -e 's|^DBPath.*|DBPath   = /opt/pacman/lib|' \
+  -e 's|^CacheDir.*|CacheDir = /opt/pacman/cache|' \
+  -e 's|^LogFile.*|LogFile  = /opt/pacman/pacman.log|' \
+  -e 's|^GPGDir.*|GPGDir   = /opt/pacman/gnupg|' \
+  /opt/pacman/pacman.conf
 
-# Move original Pacman binary if it hasn't been moved already
+# pacman binary shuffle
 if [ ! -f /usr/bin/realpacman ]; then
-    mv "$(which pacman)" "/usr/bin/realpacman" 2>/dev/null
+    mv "$(command -v pacman)" /usr/bin/realpacman
 fi
 
-# Create a wrapper script for Pacman to ensure proper paths are used
-p=/usr/bin/pacman
-cat <<EOF > "$p"
+cat >/usr/bin/pacman <<'EOF'
 #!/bin/bash
-exec realpacman --dbpath /opt/pacman/lib --cachedir /opt/pacman/cache "\$@"
+exec /usr/bin/realpacman \
+     --config   /opt/pacman/pacman.conf \
+     --dbpath   /opt/pacman/lib        \
+     --cachedir /opt/pacman/cache      \
+     --gpgdir   /opt/pacman/gnupg      \
+     "$@"
 EOF
-
-# Ensure the script is executable
-chmod +x "$p"
-dos2unix "$p" 2>/dev/null
+chmod +x /usr/bin/pacman
+rm -f /opt/pacman/lib/db.lck
 
 echo "Pacman patch applied successfully."
+
 #--------------------------------------------------------------------------------------------
 
 #--------------------------------------------------------------------# --------------------------------------------------------------------------------------------
