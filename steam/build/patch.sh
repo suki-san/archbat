@@ -161,11 +161,11 @@ fix for nvidia lutris
 			wait
 #--------------------------------------------------------------------------------------------
 # add appimage greenlight version due to borked yay builder
-	echo -e "\n\n\nadding greenlight"
-		link=$(curl -s https://api.github.com/repos/unknownskl/greenlight/releases/latest | jq -r ".assets[] | select(.name | endswith(\".AppImage\")) | .browser_download_url" | grep AppImage)
-			wget --tries=50 --no-check-certificate --no-cache --no-cookies -O "/usr/bin/greenlight-beta" "$link"
-				chmod 777 /usr/bin/greenlight-beta 2>/dev/null
-					ln -sf /usr/bin/greenlight-beta /usr/bin/greenlight 2>/dev/null
+	#echo -e "\n\n\nadding greenlight"
+	#	link=$(curl -s https://api.github.com/repos/unknownskl/greenlight/releases/latest | jq -r ".assets[] | select(.name | endswith(\".AppImage\")) | .browser_download_url" | grep AppImage)
+	#		wget --tries=50 --no-check-certificate --no-cache --no-cookies -O "/usr/bin/greenlight-beta" "$link"
+	#			chmod 777 /usr/bin/greenlight-beta 2>/dev/null
+	#				ln -sf /usr/bin/greenlight-beta /usr/bin/greenlight 2>/dev/null
 #--------------------------------------------------------------------------------------------
 # Add VacuumTube AppImage (latest release)
 echo -e "\n\n\nInstalling latest VacuumTube AppImage..."
