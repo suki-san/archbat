@@ -128,7 +128,7 @@ APPNAME=STEAM # for installer info
 appname=steam # directory name in /userdata/system/pro/...
 AppName=steam.sh # Shell script name
 APPPATH=/userdata/system/pro/$appname
-APPLINK=https://github.com/ajones/bcontainers/releases/download/r1/steam.sh
+APPLINK=https://github.com/suki-san/archbat/releases/download/r1/steam.sh
 ORIGIN="PROFORK" # credit & info
 # --------------------------------------------------------------------
 # Output colors:
@@ -169,7 +169,7 @@ cp $launcher /userdata/roms/ports/$appname.sh 2>/dev/null
 # Install desktop shortcut
 icon=/userdata/system/pro/$appname/extra/icon.png
 mkdir -p /userdata/system/pro/$appname/extra
-wget --tries=3 --timeout=10 --no-check-certificate -q -O $icon https://github.com/ajones/bcontainers/raw/master/steam/extra/icon.png
+wget --tries=3 --timeout=10 --no-check-certificate -q -O $icon https://github.com/suki-san/archbat/raw/master/steam/extra/icon.png
 
 shortcut=/userdata/system/pro/$appname/extra/$appname.desktop
 rm -rf $shortcut

@@ -219,7 +219,7 @@ echo "Downloading ES Systems"
    # wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/steam2.keys https://github.com/suki-san/archbat/raw/master/steam/shortcuts/es_configs/keys/steam2.keys &
    # wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/configs/evmapy/steam.keys https://github.com/suki-san/archbat/raw/master/steam/shortcuts/es_configs/keys/steam.keys &
     #
-    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/pro/steam/batocera-conty-patcher.sh https://github.com/ajones/bcontainers/raw/master/steam/build/batocera-conty-patcher.sh &
+    wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/pro/steam/batocera-conty-patcher.sh https://github.com/suki-san/archbat/raw/master/steam/build/batocera-conty-patcher.sh &
         wait
             dos2unix /userdata/system/configs/evmapy/*.keys 2>/dev/null
             dos2unix /userdata/system/pro/steam/batocera-conty-patcher.sh 2>/dev/null
@@ -250,10 +250,10 @@ clear
 echo "Launching container builder script -- This will take a while"
 sleep 5
 
-curl -Ls  https://github.com/ajones/bcontainers/raw/master/steam/build.sh | bash 
+curl -Ls  https://github.com/suki-san/archbat/raw/master/steam/build.sh | bash 
 
 MSG="Install Done. Update Gamelist to see new system(s). You should see a new system in EmulationStation called Linux or Arch Container depending on theme.\n\nMore apps available in PCMAN-Filemanager"
 dialog --title "Arch Container Setup Complete" --msgbox "$MSG" 20 70
 
-curl -L https://github.com/ajones/bcontainers/raw/master/app/mainmenu.sh | bash
+curl -L https://github.com/suki-san/archbat/raw/master/app/mainmenu.sh | bash
 

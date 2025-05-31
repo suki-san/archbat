@@ -3,39 +3,39 @@
 # Function to download prebuilt image
 download_prebuilt() {
     echo "Downloading Prebuilt Image..."
-    curl -L https://github.com/ajones/bcontainers/raw/master/steam/install2.sh | bash
+    curl -L https://github.com/suki-san/archbat/raw/master/steam/install2.sh | bash
 }
 
 # Function to build container from scratch
 build_from_scratch() {
     echo "Building Up-to-Date Container from Scratch..."
-    curl -L https://github.com/ajones/bcontainers/raw/master/steam/install_new.sh | bash
+    curl -L https://github.com/suki-san/archbat/raw/master/steam/install_new.sh | bash
 }
 
 # Function to install Steam only mini container (AMD/INTEL GPU ONLY)
 install_steam_mini() {
     echo "Installing Steam Only Mini Container..."
-    curl -L  https://github.com/ajones/bcontainers/raw/master/steam/steam_installer.sh| bash
+    curl -L  https://github.com/suki-san/archbat/raw/master/steam/steam_installer.sh| bash
 }
 
 # Function to install Lutris only mini container (AMD/INTEL GPU ONLY)
 install_lutris_mini() {
     echo "Installing Lutris Only Mini Container..."
-    curl -L  https://github.com/ajones/bcontainers/raw/master/lutris/lutris.sh | bash
+    curl -L  https://github.com/suki-san/archbat/raw/master/lutris/lutris.sh | bash
 }
 
 # Function to install Minecraft Bedrock Edition mini container (AMD/INTEL GPU ONLY)
 install_minecraft_mini() {
     echo "Installing Minecraft Bedrock Edition Mini Container..."
-    curl -L https://github.com/ajones/bcontainers/raw/master/bedrock/install.sh | bash
+    curl -L https://github.com/suki-san/archbat/raw/master/bedrock/install.sh | bash
 }
 # Function to install Bottles mini container (AMD/INTEL GPU ONLY)
 install_bottles_mini() {
     echo "Installing Bottles Mini Container..."
-    curl -L https://github.com/ajones/bcontainers/raw/master/bottles/bottles.sh | bash
+    curl -L https://github.com/suki-san/archbat/raw/master/bottles/bottles.sh | bash
 }
 
-https://github.com/ajones/bcontainers/blob/master/bottles/bottles.sh
+https://github.com/suki-san/archbat/blob/master/bottles/bottles.sh
 # Display the menu
 while true; do
     CHOICE=$(dialog --clear \

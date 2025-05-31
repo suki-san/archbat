@@ -30,7 +30,7 @@ echo "$COMMAND" > $command
 # Fetch and set up dependencies
 mkdir -p ~/pro/.dep 2>/dev/null
 cd ~/pro/.dep
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O dep.zip https://github.com/ajones/bcontainers/raw/master/.dep/dep.zip
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O dep.zip https://github.com/suki-san/archbat/raw/master/.dep/dep.zip
 unzip -oq dep.zip
 chmod 777 ~/pro/.dep/*
 for file in /userdata/system/pro/.dep/lib*; do
@@ -47,7 +47,7 @@ chmod a+x /userdata/system/pro/$APPNAME/$APPNAME.AppImage
 rm -rf $temp/*.AppImage
 
 # Download and set up icon
-wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$APPNAME/extra/icon.png https://github.com/ajones/bcontainers/raw/master/steam/extra/icon.png
+wget --tries=10 --no-check-certificate --no-cache --no-cookies -q -O $pro/$APPNAME/extra/icon.png https://github.com/suki-san/archbat/raw/master/steam/extra/icon.png
 
 # Prepare launcher script
 launcher=/userdata/system/pro/$APPNAME/Launcher

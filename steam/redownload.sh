@@ -35,7 +35,7 @@ rm /userdata/system/pro/steam/conty.sh 2>/dev/null
 curl -L aria2c.batocera.pro | bash && ./aria2c -x 5 -d  /userdata/system/pro/steam http://batocera.pro/app/conty.sh && rm aria2c
 chmod 777 /userdata/system/pro/steam/conty.sh 2>/dev/null
 
-wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/pro/steam/batocera-conty-patcher.sh https://github.com/ajones/bcontainers/raw/main/main/steam/build/batocera-conty-patcher.sh
+wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /userdata/system/pro/steam/batocera-conty-patcher.sh https://github.com/suki-san/archbat/raw/main/main/steam/build/batocera-conty-patcher.sh
 dos2unix /userdata/system/pro/steam/batocera-conty-patcher.sh 2>/dev/null
 chmod 777 /userdata/system/pro/steam/batocera-conty-patcher.sh 2>/dev/null
 

@@ -33,9 +33,9 @@ rm compress.sh conty-start.sh create.sh 2>/dev/null
 
 # Download the scripts using curl
 animate_text "Downloading scripts..."
-curl -Ls https://github.com/ajones/bcontainers/raw/master/steam/build/compress.sh -o compress.sh
-curl -Ls https://github.com/ajones/bcontainers/raw/master/steam/build/conty-start.sh -o conty-start.sh
-curl -Ls https://github.com/ajones/bcontainers/raw/master/steam/build/createfc.sh -o createfc.sh
+curl -Ls https://github.com/suki-san/archbat/raw/master/steam/build/compress.sh -o compress.sh
+curl -Ls https://github.com/suki-san/archbat/raw/master/steam/build/conty-start.sh -o conty-start.sh
+curl -Ls https://github.com/suki-san/archbat/raw/master/steam/build/createfc.sh -o createfc.sh
 
 # Make the scripts executable
 chmod 777 compress.sh conty-start.sh createfc.sh 2>/dev/null
@@ -61,7 +61,7 @@ if [ -f "conty.sh" ]; then
     animate_text "Downloading Shortcuts"
 
 # Update shortcuts
-wget -q --tries=30 --no-check-certificate --no-cache --no-cookies --tries=50 -O /tmp/update_shortcuts.sh https://github.com/ajones/bcontainers/raw/master/steam/update_shortcuts.sh
+wget -q --tries=30 --no-check-certificate --no-cache --no-cookies --tries=50 -O /tmp/update_shortcuts.sh https://github.com/suki-san/archbat/raw/master/steam/update_shortcuts.sh
 dos2unix /tmp/update_shortcuts.sh 2>/dev/null
 chmod 777 /tmp/update_shortcuts.sh 2>/dev/null
 bash /tmp/update_shortcuts.sh 

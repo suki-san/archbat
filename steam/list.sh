@@ -147,4 +147,4 @@ dialog --title "Container Apps Available via EmulationStation" --msgbox "$(print
 clear
 
 
-curl -Ls https://github.com/ajones/bcontainers/raw/master/steam/steam.sh | bash
+curl -Ls https://github.com/suki-san/archbat/raw/master/steam/steam.sh | bash

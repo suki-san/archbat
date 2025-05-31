@@ -39,7 +39,7 @@ case $CHOICE in
      1)
         echo "Installing Arch Container..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/steam/select.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/steam/select.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
@@ -47,7 +47,7 @@ case $CHOICE in
      2)
         echo "Loading Package List..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/steam/list.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/steam/list.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
@@ -55,7 +55,7 @@ case $CHOICE in
     3)
         echo "Loading Uninstall script..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/steam/uninstall.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/steam/uninstall.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
@@ -63,7 +63,7 @@ case $CHOICE in
     4)  
         echo "Update EmulationStation Arch Container Launcher Shortcuts..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/steam/update_shortcuts.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/steam/update_shortcuts.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
@@ -71,7 +71,7 @@ case $CHOICE in
      5)  
         echo "Installing Desktop/Windowed Mode..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/steam/arch-de.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/steam/arch-de.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
@@ -79,7 +79,7 @@ case $CHOICE in
     6)  
         echo "Add/Update Lutris shortcuts to emulationstation..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/steam/addon_lutris.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/steam/addon_lutris.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
@@ -87,7 +87,7 @@ case $CHOICE in
     7)  
         echo "Add/update Heroic shortcuts to emulationstation..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/steam/addon_heroic.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/steam/addon_heroic.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
@@ -95,7 +95,7 @@ case $CHOICE in
    8)  
         echo "Add/update PS4 shortcuts to emulationstation..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/steam/addon_ps4.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/steam/addon_ps4.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
@@ -103,7 +103,7 @@ case $CHOICE in
   9)  
         echo "Emudeck Menu..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/emudeck/emudeck.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/emudeck/emudeck.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
@@ -111,7 +111,7 @@ case $CHOICE in
  10)  
         echo "Webapps Installer..."
         rm /tmp/runner 2>/dev/null
-        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/ajones/bcontainers/raw/master/webapps/install.sh
+        wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/webapps/install.sh
         dos2unix /tmp/runner 2>/dev/null 
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner

@@ -120,7 +120,7 @@ echo "Downloading  conty.sh parts to /userdata/system/pro/steam..."
 # Download each part with progress messages
 for i in 1 2 3; do
   echo "Downloading conty_part_$i..."
-  curl -L --progress-bar -o "conty_part_$i" "https://github.com/ajones/bcontainers/releases/download/r1/conty_part_$i" || { echo "Download failed for conty_part_$i"; exit 1; }
+  curl -L --progress-bar -o "conty_part_$i" "https://github.com/suki-san/archbat/releases/download/r1/conty_part_$i" || { echo "Download failed for conty_part_$i"; exit 1; }
 done
 
 # Verify all parts exist
@@ -162,7 +162,7 @@ chmod +x "$DOWNLOAD_FILE"
 
 
 # Update shortcuts
-wget -q --tries=30 --no-check-certificate --no-cache --no-cookies --tries=50 -O /tmp/update_shortcuts.sh https://github.com/ajones/bcontainers/raw/master/steam/update_shortcuts.sh
+wget -q --tries=30 --no-check-certificate --no-cache --no-cookies --tries=50 -O /tmp/update_shortcuts.sh https://github.com/suki-san/archbat/raw/master/steam/update_shortcuts.sh
 dos2unix /tmp/update_shortcuts.sh 2>/dev/null
 chmod 777 /tmp/update_shortcuts.sh 2>/dev/null
 bash /tmp/update_shortcuts.sh 
@@ -179,7 +179,7 @@ sleep 1
 
 MSG="Install Done. \nRefresh ES to see new system. \nYou should see a new system  in EmulationStation called Linux or Arch Container depending on theme\nNVIDIA Users: Drivers will download in the background on First app start-up & can take a while."
 dialog --title "Arch Container Setup Complete" --msgbox "$MSG" 20 70
-curl -L https://github.com/ajones/bcontainers/raw/master/app/mainmenu.sh | bash
+curl -L https://github.com/suki-san/archbat/raw/master/app/mainmenu.sh | bash
 ###############
 
 
