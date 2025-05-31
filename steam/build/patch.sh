@@ -168,26 +168,22 @@ fix for nvidia lutris
 	#				ln -sf /usr/bin/greenlight-beta /usr/bin/greenlight 2>/dev/null
 #--------------------------------------------------------------------------------------------
 # Add VacuumTube AppImage (latest release)
-echo -e "\n\n\nInstalling latest VacuumTube AppImage..."
+link=$(curl -s https://api.github.com/repos/shy1132/VacuumTube/releases/latest \
+        | jq -r '.assets[]
+                  | select(.name|test("x86_64.*\\.AppImage$"))
+                  | .browser_download_url' \
+        | head -n1)
 
-# Get latest AppImage URL from GitHub
-link=$(curl -s https://api.github.com/repos/shy1132/VacuumTube/releases/latest | \
-  jq -r '.assets[] | select(.name | endswith(".AppImage")) | .browser_download_url' | \
-  grep AppImage)
-
-if [[ -z "$link" ]]; then
-  echo "❌ Failed to fetch VacuumTube AppImage URL."
+if [[ -z $link ]]; then
+  echo "❌  No x86-64 AppImage found in latest release."
   exit 1
 fi
 
-# Download and install to /usr/bin
-echo "Downloading from: $link"
-wget --tries=50 --no-check-certificate --no-cache --no-cookies -O "/usr/bin/vacuumtube" "$link"
-
-# Make it executable
+echo "Downloading VacuumTube from: $link"
+wget --tries=50 --no-check-certificate --no-cache --no-cookies \
+     -O /usr/bin/vacuumtube "$link"
 chmod +x /usr/bin/vacuumtube
-
-echo "✅ VacuumTube installed to /usr/bin/vacuumtube"
+echo "✅  VacuumTube installed to /usr/bin/vacuumtube"
 
 
 #--------------------------------------------------------------------------------------------
