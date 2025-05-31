@@ -422,7 +422,7 @@ if [ -n "${aur_packagelist}" ]; then
 	run_in_chroot pacman --noconfirm --needed -S base-devel yay
 	run_in_chroot useradd -m -G wheel aur
 	# yank sudo so yay can run pacman directly without tripping NO_NEW_PRIVS
-        run_in_chroot pacman -Rdd --noconfirm sudo
+        # run_in_chroot pacman -Rdd --noconfirm sudo
 
         echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" >> "${bootstrap}"/etc/sudoers
 
