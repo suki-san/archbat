@@ -26,7 +26,7 @@ wine_pkgs="wine winetricks wine-nine wineasio \
 giflib lib32-giflib libpng lib32-libpng libldap lib32-libldap \
 gnutls lib32-gnutls mpg123 lib32-mpg123 openal lib32-openal \
 v4l-utils lib32-v4l-utils libpulse lib32-libpulse alsa-plugins \
-lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo \
+lib32-alsa-plugins alsa-lib lib32-alsa-lib libjpeg-turbo  \
 lib32-libjpeg-turbo libxcomposite lib32-libxcomposite libxinerama \
 lib32-libxinerama libxslt lib32-libxslt libva lib32-libva gtk3 \
 lib32-gtk3 vulkan-icd-loader lib32-vulkan-icd-loader sdl2 lib32-sdl2 \
@@ -48,9 +48,9 @@ mangohud thunderbird gimp audacity lib32-mangohud kodi ksysguard ark kate okular
 qt5-wayland xorg-server-xephyr openbox binutils emby-theater yt-dlp \
 xdotool xbindkeys gparted vlc smplayer mpv fish zsh xmlstarlet nvtop duf exa systemsettings dolphin  \
 legendary gamescope  minizip flatpak libreoffice rsync sdl_mixer sdl_image sdl_ttf sdl_gfx \
-xorg-server xorg-xinit xorg-xrandr xorg-xhost xorg-xdpyinfo github-cli libwebp  \
-ripgrep i7z sd bandwhich tre zoxide p7zip atop iftop sysstat totem feh krename davinci-resolve  \
-bottles bauh flatseal rebuild-detector ccache axel breeze xorg-xdpyinfo dua-cli  \
+xorg-server xorg-xinit xorg-xrandr xorg-xhost xorg-xdpyinfo github-cli libwebp ppsspp-git \
+ripgrep i7z sd bandwhich tre zoxide p7zip atop iftop sysstat totem feh krename  \
+bottles bauh flatseal rebuild-detector ccache axel breeze xorg-xdpyinfo dua-cli pcem-git strawberry-git  \
 handbrake tigervnc remmina  kitty terminator xorg-xkill media-downloader file  noto-fonts ttf-ubuntu-font-family ttf-droid \
 docker docker-compose portainer-bin unzip gthumb nmon thunar nemo umu-launcher gtk-engines gtk-engine-murrine  \
 gdk-pixbuf-xlib gdk-pixbuf2 xarchiver mc vifm fd deckctl steam-tweaks deck-pref-gui ffmpeg handbrake   \
@@ -65,7 +65,7 @@ libretro-gambatte libretro-melonds libretro-mgba libretro-nestopia libretro-para
 libretro-retrodream libretro-yabause pcsx2-git cemu-git citron-git ryujinx shadps4-git 86box \
 screenfetch glances discord jre8-openjdk gcc13 python-pip xfce4 xfce4-goodies obs-studio-git lua53 youtube-music-bin"
 # If you want to install AUR packages, specify them in this variable
-export aur_packagelist="geforcenow-electron mcpelauncher-appimage parsec-bin protonup-qt azahar-appimage rpcs3-bin  86box-roms 86box-manager-bin sgdboop-bin winegui-bin icu66-bin davinci-resolve \
+export aur_packagelist="geforcenow-electron mcpelauncher-appimage parsec-bin protonup-qt azahar-appimage rpcs3-bin  86box-roms 86box-manager-bin sgdboop-bin  icu66-bin  \
  zoom"
 
 # ALHP is a repository containing packages from the official Arch Linux
