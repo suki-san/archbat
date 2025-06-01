@@ -100,7 +100,26 @@ fix for nvidia lutris
 #					echo "added fightcade2 latest realease"
 #				fi
 #--------------------------------------------------------------------------------------------
-#
+## Add VacuumTube AppImage (latest release)
+link=$(curl -s https://api.github.com/repos/shy1132/VacuumTube/releases/latest \
+        | jq -r '.assets[]
+                  | select(.name|test("x86_64.*\\.AppImage$"))
+                  | .browser_download_url' \
+        | head -n1)
+
+if [[ -z $link ]]; then
+  echo "❌  No x86-64 AppImage found in latest release."
+  exit 1
+fi
+
+echo "Downloading VacuumTube from: $link"
+wget --tries=50 --no-check-certificate --no-cache --no-cookies \
+     -O /usr/bin/vacuumtube "$link"
+chmod +x /usr/bin/vacuumtube
+echo "✅  VacuumTube installed to /usr/bin/vacuumtube"
+
+
+#------------------------------------------------------------------------------------
 # Install/upgrade XStreamingDesktop AppImage (latest release)
 #
 set -euo pipefail
@@ -196,24 +215,6 @@ echo "✅  ClipGrab installed to /usr/bin/clipgrab"
 	#			chmod 777 /usr/bin/greenlight-beta 2>/dev/null
 	#				ln -sf /usr/bin/greenlight-beta /usr/bin/greenlight 2>/dev/null
 #--------------------------------------------------------------------------------------------
-# Add VacuumTube AppImage (latest release)
-link=$(curl -s https://api.github.com/repos/shy1132/VacuumTube/releases/latest \
-        | jq -r '.assets[]
-                  | select(.name|test("x86_64.*\\.AppImage$"))
-                  | .browser_download_url' \
-        | head -n1)
-
-if [[ -z $link ]]; then
-  echo "❌  No x86-64 AppImage found in latest release."
-  exit 1
-fi
-
-echo "Downloading VacuumTube from: $link"
-wget --tries=50 --no-check-certificate --no-cache --no-cookies \
-     -O /usr/bin/vacuumtube "$link"
-chmod +x /usr/bin/vacuumtube
-echo "✅  VacuumTube installed to /usr/bin/vacuumtube"
-
 
 #--------------------------------------------------------------------------------------------
 echo -e "\n\n\nAdding basic Pacman support"
