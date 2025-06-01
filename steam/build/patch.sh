@@ -167,6 +167,24 @@ echo "⬇️  Downloading ClipGrab 3.9.10 from: $URL"
 install -Dm755 <(curl -fsSL --retry 5 "$URL") /usr/bin/clipgrab
 echo "✅  ClipGrab installed to /usr/bin/clipgrab"
 
+#--------------------------------------------------------------------------------------------
+
+# Install xcloud 
+#
+set -euo pipefail
+
+ARCH=$(uname -m)
+if [[ "$ARCH" != "x86_64" ]]; then
+  echo "❌  xloud  distributes only an x86-64 AppImage. Unsupported arch: $ARCH"
+  exit 2
+fi
+
+URL="https://github.com/marzeq/xbox-cloud-gaming-electron/releases/download/1.0.20/xbox-cloud-gaming-electron_1.0.20.AppImage"
+
+echo "⬇️  Downloading Xcloud from: $URL"
+install -Dm755 <(curl -fsSL --retry 5 "$URL") /usr/bin/xcloud
+echo "✅  Xcloud installed to /usr/bin/xcloud"
+
 
 
 
