@@ -63,7 +63,7 @@ microsoft-edge-stable-bin qdirstat peazip jq steam-rom-manager-git google-chrome
 prismlauncher retroarch-assets-ozone libretro-beetle-psx-hw bretro-blastem libretro-bsnes libretro-dolphin duckstation  \
 libretro-gambatte libretro-melonds libretro-mgba libretro-nestopia libretro-parallel-n64 libretro-picodrive libretro-ppsspp \
 libretro-retrodream libretro-yabause pcsx2-git cemu-git citron-git ryujinx shadps4-git greenlight-bin azahar-git vita3k-git minetest-git \
-screenfetch glances discord jre8-openjdk   gcc13 python-pip xfce4 xfce4-goodies obs-studio-git lua53 youtube-music-bin zoom whatsapp-for-linux"
+screenfetch glances discord  gcc13 python-pip xfce4 xfce4-goodies obs-studio-git lua53 youtube-music-bin zoom whatsapp-for-linux"
 # If you want to install AUR packages, specify them in this variable
 export aur_packagelist="geforcenow-electron jdowloader2 davinci-resolve qwinff rpcs3-bin mcpelauncher-appimage parsec-bin protonup-qt sgdboop-bin winegui-bin icu66-bin libffi7"
 
