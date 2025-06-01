@@ -149,23 +149,6 @@ echo "⬇️  Downloading XStreamingDesktop from: $asset"
 install -Dm755 <(curl -fsSL --retry 5 "$asset") /usr/bin/xstreaming
 echo "✅  XStreamingDesktop installed to /usr/bin/xstreaming"
 
-#--------------------------------------------------------------------------------------------
-
-# Install/upgrade ClipGrab AppImage (static version 3.9.10)
-#
-set -euo pipefail
-
-ARCH=$(uname -m)
-if [[ "$ARCH" != "x86_64" ]]; then
-  echo "❌  ClipGrab distributes only an x86-64 AppImage. Unsupported arch: $ARCH"
-  exit 2
-fi
-
-URL="https://download.clipgrab.org/ClipGrab-3.9.10-x86_64.AppImage"
-
-echo "⬇️  Downloading ClipGrab 3.9.10 from: $URL"
-install -Dm755 <(curl -fsSL --retry 5 "$URL") /usr/bin/clipgrab
-echo "✅  ClipGrab installed to /usr/bin/clipgrab"
 
 #--------------------------------------------------------------------------------------------
 
