@@ -42,7 +42,7 @@ devel_pkgs="base-devel git meson mingw-w64-gcc cmake"
 # packages from the Chaotic-AUR repo
 export packagelist="${audio_pkgs} ${video_pkgs} ${wine_pkgs} ${devel_pkgs} \
 nano ttf-dejavu ttf-liberation steam mpv pcmanfm strace nnn bat \
-htop aria2 fastfetch xorg-xwayland kdenlive gedit btop ranger python-pyqt6-webengine\
+htop aria2 fastfetch xorg-xwayland kdenlive gedit btop ranger python-pyqt6-webengine \
 steam-native-runtime gamemode pax-utils lib32-gamemode jre-openjdk lxterminal \
 mangohud thunderbird gimp audacity lib32-mangohud kodi ksysguard ark kate okular breeze breeze-gtk  \
 qt5-wayland xorg-server-xephyr openbox binutils emby-theater yt-dlp ffmpeg \
@@ -57,15 +57,15 @@ gdk-pixbuf-xlib gdk-pixbuf2 xarchiver mc vifm fd deckctl steam-tweaks deck-pref-
 steam-boilr-gui btrfs-assistant protontricks-git lib32-sdl12-compat sdl12-compat appimagepool-appimage  kmod pciutils xrdp x11vnc tigervnc onboard remmina vinagre freerdp sunshine btrfs-progs tre \
 podman distrobox cheese filezilla dos2unix wmctrl xorg-xprop fzf scc yarn sdl2 sdl2_image squashfs-tools android-sdk android-sdk-platform-tools android-sdk-build-tools android-studio  86box  \
 btrfs-heatmap meld lynx yq xorg xorg-server-xvfb nodejs npm cairo-dock imagemagick strace sdl2_mixer python-pysdl2 minecraft-launcher  \
-tint2 plank lxde mate mate-extra dialog xterm compsize antimicrox lutris-git chiaki procs sdl2_ttf pcem-git obs-vaapi obs-gstreamer obs-rtspserver\
-protontricks-git sublime-text-4 fuse2 heroic-games-launcher-bin moonlight-qt ventoy-bin 7-zip crun runc spotify librewolf    \
+tint2 plank lxde mate mate-extra dialog xterm compsize antimicrox lutris-git chiaki procs sdl2_ttf pcem-git obs-vaapi obs-gstreamer obs-rtspserver \
+protontricks-git sublime-text-4 fuse2 heroic-games-launcher-bin moonlight-qt ventoy-bin 7-zip crun runc spotify librewolf \
 microsoft-edge-stable-bin qdirstat peazip jq steam-rom-manager-git google-chrome steamtinkerlaunch xfwm4 xfwm4-themes \
 prismlauncher retroarch-assets-ozone libretro-beetle-psx-hw bretro-blastem libretro-bsnes libretro-dolphin duckstation  \
 libretro-gambatte libretro-melonds libretro-mgba libretro-nestopia libretro-parallel-n64 libretro-picodrive libretro-ppsspp \
 libretro-retrodream libretro-yabause pcsx2-git cemu-git citron-git ryujinx shadps4-git greenlight-bin azahar-git vita3k-git minetest-git \
 screenfetch glances discord jre8-openjdk   gcc13 python-pip xfce4 xfce4-goodies obs-studio-git lua53 youtube-music-bin zoom whatsapp-for-linux"
 # If you want to install AUR packages, specify them in this variable
-export aur_packagelist="geforcenow-electron jdowloader2 davinci-resolve qwinff rpcs3-bin mcpelauncher-appimage parsec-bin protonup-qt  sgdboop-bin winegui-bin icu66-bin libffi7"
+export aur_packagelist="geforcenow-electron jdowloader2 davinci-resolve qwinff rpcs3-bin mcpelauncher-appimage parsec-bin protonup-qt sgdboop-bin winegui-bin icu66-bin libffi7"
 
 # ALHP is a repository containing packages from the official Arch Linux
 # repos recompiled with -O3, LTO and optimizations for modern CPUs for
