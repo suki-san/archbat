@@ -100,28 +100,57 @@ fix for nvidia lutris
 #					echo "added fightcade2 latest realease"
 #				fi
 #--------------------------------------------------------------------------------------------
-# add blender
-#	echo -e "\n\n\nadding blender"
-#	pacman -R blender blender-bin 2>/dev/null
-#		link="https://ftp.nluug.nl/pub/graphics/blender/release/Blender4.1/blender-4.1.1-linux-x64.tar.xz"
-#		p=/opt/blender
-#		t=/tmp/blender
-#		f="$t/file"
-#			rm -rf $p $t 2>/dev/null
-#			mkdir -p $p $t 2>/dev/null
-#			cd $t
-#			wget -q --show-progress --tries=30 -O "$f" "$link"
-#			tar -xf "$f"
-#			cd ${PWD}/*/
-#			cp -r ${PWD}/* $p/
-#			cd $p 
-#			rm /usr/bin/blender 2>/dev/null
-#			rm -rf $t
-#				if [[ -f "${p}"/blender ]]; 
-#					then
-#					ln -sf "${p}"/blender /usr/bin/blender 2>/dev/null
-#					echo "added blender 4.1.1"
-#				fi
+#
+# Install/upgrade XStreamingDesktop AppImage (latest release)
+#
+set -euo pipefail
+
+REPO="Geocld/XStreamingDesktop"
+API_URL="https://api.github.com/repos/${REPO}/releases/latest"
+
+ARCH=$(uname -m)
+case "$ARCH" in
+  x86_64)  PAT='(x86_64.*\.AppImage$|\.AppImage$)' ;;   # repo ships a generic AppImage
+  aarch64) PAT='(arm64.*\.AppImage$|aarch64.*\.AppImage$|\.AppImage$)' ;;
+  *)       echo "❌ Unsupported arch: $ARCH" ; exit 2 ;;
+esac
+
+asset=$(curl -fsSL "$API_URL" \
+          | jq -r --arg re "$PAT" '.assets[]
+                   | select(.name | test($re))
+                   | .browser_download_url' \
+          | head -n1)
+
+if [[ -z $asset ]]; then
+  echo "❌ No AppImage for $ARCH found in the latest release."
+  exit 1
+fi
+
+echo "⬇️  Downloading XStreamingDesktop from: $asset"
+install -Dm755 <(curl -fsSL --retry 5 "$asset") /usr/bin/xstreaming
+echo "✅  XStreamingDesktop installed to /usr/bin/xstreaming"
+
+#--------------------------------------------------------------------------------------------
+
+# Install/upgrade ClipGrab AppImage (static version 3.9.10)
+#
+set -euo pipefail
+
+ARCH=$(uname -m)
+if [[ "$ARCH" != "x86_64" ]]; then
+  echo "❌  ClipGrab distributes only an x86-64 AppImage. Unsupported arch: $ARCH"
+  exit 2
+fi
+
+URL="https://download.clipgrab.org/ClipGrab-3.9.10-x86_64.AppImage"
+
+echo "⬇️  Downloading ClipGrab 3.9.10 from: $URL"
+install -Dm755 <(curl -fsSL --retry 5 "$URL") /usr/bin/clipgrab
+echo "✅  ClipGrab installed to /usr/bin/clipgrab"
+
+
+
+
 #--------------------------------------------------------------------------------------------
 # run additional rootpatches/fixes
 	echo -e "\n\n\nfixing root apps"
