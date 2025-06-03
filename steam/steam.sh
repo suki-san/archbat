@@ -21,9 +21,10 @@ OPTIONS=("1" "Install/Update Arch Container "
          "6" "Addon: Add/Update Lutris Menu & Shortcuts to Emulationstation"
          "7" "Addon: Add/Update Heroic Menu & Shortcuts to Emulationstation"
          "8" "Addon: Add/Update PS4 Menu & Shortcuts to Emulationstation"
-         "9" "Addon: Emudeck"
-         "10" "Addon: Webapps"
-         "99" "Exit to main menu")
+         "9" "Addon: Sunshine Service via Arch Container"
+         "10" "Addon: Emudeck"
+         "11" "Addon: Webapps"
+         "99" "Exit")
 while true; do
 # Display the dialog and get the user choice
 CHOICE=$(dialog --clear --backtitle "Arch Container Management" \
@@ -100,7 +101,11 @@ case $CHOICE in
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
         ;;
-  9)  
+   9)  
+        echo "Sunshine Service..."
+        curl -Ls https://github.com/suki-san/archbat/raw/master/steam/addon_sunshine.sh | bash
+        ;;
+  10)  
         echo "Emudeck Menu..."
         rm /tmp/runner 2>/dev/null
         wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/emudeck/emudeck.sh
@@ -108,7 +113,7 @@ case $CHOICE in
         chmod 777 /tmp/runner 2>/dev/null
         bash /tmp/runner
         ;;
- 10)  
+ 11)  
         echo "Webapps Installer..."
         rm /tmp/runner 2>/dev/null
         wget -q --tries=30 --no-check-certificate --no-cache --no-cookies -O /tmp/runner https://github.com/suki-san/archbat/raw/master/webapps/install.sh
