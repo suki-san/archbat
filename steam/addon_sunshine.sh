@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Define the file path
+filePath="$HOME/pro/steam/conty.sh"
+
+# Check if the file exists
+if [ -f "$filePath" ]; then
+    echo "conty.sh exists, continuing the script..."
+   
+else
+    echo "It appears the container is not installed. Please install the multi-app Arch container first, then retry."
+    sleep 10
+    exit 1
+fi
+
 #--------------------------------------------------------
 # Create required directories
 mkdir -p /userdata/system/pro/sunshine
