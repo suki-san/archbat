@@ -6,6 +6,7 @@ mkdir -p /userdata/system/pro/sunshine
 mkdir -p /userdata/system/logs
 mkdir -p /userdata/system/services
 mkdir -p /userdata/roms/conty
+mkdir -p /userdata/system/.config/sunshine
 #--------------------------------------------------------
 
 #--------------------------------------------------------
@@ -109,6 +110,6 @@ chmod +x /userdata/roms/conty/Sunshine-Config.sh
 
 #--------------------------------------------------------
 # Done!
-dialog --msgbox "Conty-based Sunshine installed and registered as 'arch_sunshine'.\n\nEnable it via Services menu.\n\nWeb UI: http://localhost:47990\nConfig shortcut: Sunshine-Config added to ES Arch Menu" 13 60
+dialog --msgbox "Conty-based Sunshine installed and registered as 'arch_sunshine'.\n\nEnable it via Services menu.\n\nWeb UI: https://localhost:47990\nConfig shortcut: Sunshine-Config added to ES Arch Menu" 13 60
 #--------------------------------------------------------
 
