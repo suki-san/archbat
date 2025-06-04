@@ -45,11 +45,11 @@ nano ttf-dejavu ttf-liberation steam mpv pcmanfm strace nnn bat \
 htop aria2 fastfetch xorg-xwayland kdenlive gedit btop ranger python-pyqt6-webengine\
 steam-native-runtime gamemode pax-utils lib32-gamemode jre-openjdk lxterminal \
 mangohud thunderbird gimp audacity lib32-mangohud kodi ksysguard ark kate okular breeze breeze-gtk  \
-qt5-wayland xorg-server-xephyr openbox binutils emby-theater yt-dlp \
+qt5-wayland xorg-server-xephyr openbox binutils emby-theater yt-dlp librewolf\
 xdotool xbindkeys gparted vlc smplayer mpv fish zsh xmlstarlet nvtop duf exa systemsettings dolphin  \
 legendary gamescope  minizip flatpak libreoffice rsync sdl_mixer sdl_image sdl_ttf sdl_gfx \
 xorg-server xorg-xinit xorg-xrandr xorg-xhost xorg-xdpyinfo github-cli libwebp ppsspp-git \
-ripgrep i7z sd bandwhich tre zoxide p7zip atop iftop sysstat totem feh krename  \
+ripgrep i7z sd bandwhich tre zoxide p7zip atop iftop sysstat totem feh krename chikai-ng \
 bottles bauh flatseal rebuild-detector ccache axel breeze xorg-xdpyinfo dua-cli pcem-git strawberry-git  \
 handbrake tigervnc remmina  kitty terminator xorg-xkill media-downloader file  noto-fonts ttf-ubuntu-font-family ttf-droid \
 docker docker-compose portainer-bin unzip gthumb nmon thunar nemo umu-launcher gtk-engines gtk-engine-murrine  \
@@ -57,7 +57,7 @@ gdk-pixbuf-xlib gdk-pixbuf2 xarchiver mc vifm fd deckctl steam-tweaks deck-pref-
 steam-boilr-gui btrfs-assistant protontricks-git lib32-sdl12-compat sdl12-compat appimagepool-appimage  kmod pciutils xrdp x11vnc tigervnc onboard remmina vinagre freerdp sunshine btrfs-progs tre \
 podman distrobox cheese filezilla dos2unix wmctrl xorg-xprop fzf scc yarn sdl2 sdl2_image squashfs-tools \
 btrfs-heatmap meld lynx yq xorg xorg-server-xvfb nodejs npm cairo-dock imagemagick strace sdl2_mixer python-pysdl2 \
-tint2 plank lxde mate mate-extra dialog xterm compsize antimicrox lutris-git chiaki procs sdl2_ttf \
+tint2 plank lxde mate mate-extra dialog xterm compsize antimicrox lutris-git chiaki procs sdl2_ttf minecraft-launcher jdownloader2 insync \
 protontricks-git sublime-text-4 fuse2 heroic-games-launcher-bin moonlight-qt ventoy-bin 7-zip crun runc \
 microsoft-edge-stable-bin qdirstat peazip jq steam-rom-manager-git google-chrome steamtinkerlaunch xfwm4 xfwm4-themes \
 prismlauncher retroarch-assets-ozone libretro-beetle-psx-hw bretro-blastem libretro-bsnes libretro-dolphin duckstation  \
@@ -65,7 +65,7 @@ libretro-gambatte libretro-melonds libretro-mgba libretro-nestopia libretro-para
 libretro-retrodream libretro-yabause pcsx2-git cemu-git citron-git ryujinx shadps4-git 86box \
 screenfetch glances discord jre8-openjdk gcc13 python-pip xfce4 xfce4-goodies obs-studio-git lua53 youtube-music-bin"
 # If you want to install AUR packages, specify them in this variable
-export aur_packagelist="geforcenow-electron mcpelauncher-appimage parsec-bin protonup-qt azahar-appimage rpcs3-bin  86box-roms 86box-manager-bin sgdboop-bin winegui-bin davinci-resolve icu66-bin  \
+export aur_packagelist="geforcenow-electron mcpelauncher-appimage parsec-bin protonup-qt azahar-appimage rpcs3-bin  86box-roms 86box-manager-bin sgdboop-bin winegui-bin  icu66-bin  \
  zoom"
 
 # ALHP is a repository containing packages from the official Arch Linux
