@@ -56,5 +56,7 @@ dos2unix /userdata/desktop/MATE.sh
 dos2unix /userdata/desktop/XFCE.sh
 
 # Display completion message
-dialog --title "Installation Complete" --msgbox " To access desktop mode:\n1. In Emulationstation, Go to Main Menu-->System Settings-->services and toggle on the windowed service. Make sure to select back to save service \n2. Reboot Batocera.\n3. Press F1. You should see a windowed pcmanFM file manager.\n4. In /userdata/desktop, launch one of the desktop environment scripts. (can take a while) \n5. To revert back to regular mode, simply deactivate windowed service and reboot" 12 80
+# Display completion message
+dialog --title "Installation Complete" --msgbox "To access desktop mode:\n1. In EmulationStation, go to Main Menu → System Settings → Services and toggle ON the Windowed service. Make sure to press Back to save.\n2. Press F1 — you should see a windowed PCManFM file manager.\n3. In /userdata/desktop, launch one of the desktop environment scripts (this can take a while).\n\nTo revert back to fullscreen mode:\n- Simply toggle the Windowed service OFF and **reboot** to apply fullscreen layout." 13 80
+
 
