@@ -56,7 +56,20 @@ dos2unix /userdata/desktop/MATE.sh
 dos2unix /userdata/desktop/XFCE.sh
 
 # Display completion message
-# Display completion message
-dialog --title "Installation Complete" --msgbox "To access desktop mode:\n1. In EmulationStation, go to Main Menu → System Settings → Services and toggle ON the Windowed service. Make sure to press Back to save.\n2. Press F1 — you should see a windowed PCManFM file manager.\n3. In /userdata/desktop, launch one of the desktop environment scripts (this can take a while).\n\nTo revert back to fullscreen mode:\n- Simply toggle the Windowed service OFF and **reboot** to apply fullscreen layout." 13 80
+
+dialog --title "Installation Complete" --msgbox "To access desktop mode:
+
+1. In EmulationStation, go to Main Menu → System Settings → Services and toggle ON the Windowed service. Make sure to press Back to save.
+
+2. Press F1 — you should see a windowed PCManFM file manager.
+
+3. In /userdata/desktop, launch one of the desktop environment scripts (this can take a while).
+
+To revert back to fullscreen mode:
+- Simply toggle the Windowed service OFF and reboot to apply fullscreen layout.
+
+NOTE:
+Some Chromium based apps that require --no-sandbox as root (like Google Chrome) should be launched from Batocera's PCManFM inside /userdata/roms/conty instead of using desktop icons or menus." 20 90
+
 
 
