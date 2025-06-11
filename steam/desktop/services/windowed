@@ -1,39 +1,52 @@
 #!/bin/sh
+set -e
 
-# Define the source directories and files
 SOURCE_DIR="$HOME/service/dir_ob"
 FULL_XML="${SOURCE_DIR}/full.xml"
 WIN_XML="${SOURCE_DIR}/window.xml"
 COMPOSITOR_SCRIPT="${SOURCE_DIR}/batocera-compositor"
-
-# Define the target file
 TARGET_FILE="/etc/openbox/rc.xml"
 
-# Function to handle the stop process
+log() {
+    printf "[%s] %s\n" "$(date '+%Y-%m-%d %H:%M:%S')" "$1"
+}
+
+reload_openbox() {
+    log "Reloading Openbox config..."
+    openbox --reconfigure || {
+        log "Openbox reload failed, restarting..."
+        pkill openbox
+        (sleep 1 && openbox &) &
+    }
+}
+
 stop() {
-    echo "Stopping: copying full.xml to $TARGET_FILE"
+    log "Stopping: copying full.xml to $TARGET_FILE"
     cp "$FULL_XML" "$TARGET_FILE"
-    echo "Stopping compositor..."
+
+    log "Stopping compositor..."
     "$COMPOSITOR_SCRIPT" stop
-    echo "Waiting 3 seconds before saving overlay..."
-    sleep 3
-    batocera-save-overlay
-    echo "Stop actions completed."
+
+    log "Restarting Openbox cleanly to apply fullscreen layout..."
+    openbox --exit
+    sleep 1
+    DISPLAY=:0 openbox &
+
+    log "Stop actions completed (fullscreen mode)"
 }
 
-# Function to handle the start process
+
 start() {
-    echo "Starting: copying win.xml to $TARGET_FILE"
+    log "Starting: copying win.xml to $TARGET_FILE"
     cp "$WIN_XML" "$TARGET_FILE"
-    echo "Starting compositor..."
+
+    log "Starting compositor..."
     "$COMPOSITOR_SCRIPT" start
-    echo "Waiting 3 seconds before saving overlay..."
-    sleep 3
-    batocera-save-overlay
-    echo "Start actions completed."
+
+    reload_openbox
+    log "Start actions completed (windowed mode)"
 }
 
-# Check for command line argument and call the appropriate function
 case "$1" in
     start)
         start
@@ -44,5 +57,5 @@ case "$1" in
     *)
         echo "Usage: $0 {start|stop}"
         exit 1
+        ;;
 esac
-
