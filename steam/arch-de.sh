@@ -69,7 +69,7 @@ To revert back to fullscreen mode:
 - Simply toggle the Windowed service OFF and reboot to apply fullscreen layout.
 
 NOTE:
-Some Chromium based apps that require --no-sandbox as root (like Google Chrome) should be launched from Batocera's PCManFM inside /userdata/roms/conty instead of using desktop icons or menus." 20 90
+Some Chromium based apps that require --no-sandbox as root (like Google Chrome) should be launched from Batocera's PCManFM inside /userdata/roms/conty instead of using desktop icons or menus." 25 90
 
 
 
